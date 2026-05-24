@@ -1,7 +1,6 @@
 # Complete Wavin AHC-9000 v3 config for ESP-01 (ESPHome 2026.5+)
 # Copy to /config/esphome/wavin.yaml
 # Repo: https://github.com/super-bedst/esphome_components
-# Repo: https://github.com/super-bedst/esphome_components
 
 substitutions:
   device_name: wavin
