@@ -1,42 +1,27 @@
-# Complete Wavin AHC-9000 v3 — ESP32-C3 Super Mini (ESPHome 2026.5+)
+# Complete Wavin AHC-9000 v3 config for ESP-01 (ESPHome 2026.5+)
 # Copy to /config/esphome/wavin.yaml
 # Repo: https://github.com/super-bedst/esphome_components
-#
-# RS-485 wiring (MAX3485 / HW-519):
-#   Modul TX  -> ESP GPIO20 (RX)
-#   Modul RX  -> ESP GPIO21 (TX)
-#   Modul DE+RE -> ESP GPIO10 (tx_enable) ELLER brug flow_control_pin nedenfor
-# Undgå GPIO2/8/9 til RS-485 (boot/strapping på C3)
 
 substitutions:
   device_name: wavin
   friendly_name: Wavin
   log_level: DEBUG
   update_interval: 60s
-  rs485_rx_pin: GPIO20
-  rs485_tx_pin: GPIO21
-  rs485_enable_pin: GPIO10
+  tx_enable_pin: GPIO2
+  rx_pin: GPIO3
+  tx_pin: GPIO1
 
 esphome:
   name: ${device_name}
   project:
     name: home.wavin_gulvvarme
-    version: "2.1.0"
-  # Fix kendt ESP32-C3 GPIO20/21 UART-kobling (kan udkommenteres hvis alt virker)
-  on_boot:
-    - priority: 1001
-      then:
-        - lambda: |-
-            gpio_reset_pin((gpio_num_t)20);
-            gpio_reset_pin((gpio_num_t)21);
-            esp_rom_gpio_connect_out_signal((gpio_num_t)20, SIG_GPIO_OUT_IDX, false, false);
+    version: "2.0.0"
 
-esp32:
-  board: esp32-c3-devkitm-1
-  framework:
-    type: arduino
+esp8266:
+  board: esp01_1m
 
 logger:
+  baud_rate: 0
   level: ${log_level}
   logs:
     wavinahc9000v3: DEBUG
@@ -73,8 +58,8 @@ external_components:
 
 uart:
   id: uart_wavin
-  rx_pin: ${rs485_rx_pin}
-  tx_pin: ${rs485_tx_pin}
+  rx_pin: ${rx_pin}
+  tx_pin: ${tx_pin}
   baud_rate: 38400
   stop_bits: 1
   parity: NONE
@@ -83,9 +68,7 @@ wavinahc9000v3:
   id: wavin
   uart_id: uart_wavin
   update_interval: ${update_interval}
-  tx_enable_pin: ${rs485_enable_pin}
-  # flow_control_pin: ${rs485_enable_pin}  # foretrækkes hvis DE+RE er koblet sammen
-  # module: ustepper  # slå til ved timeout/fejl på RS-485
+  tx_enable_pin: ${tx_enable_pin}
   # keep_standby_alive: true
   # standby_keepalive_interval: 180s
   channel_01_friendly_name: "Køkken"
