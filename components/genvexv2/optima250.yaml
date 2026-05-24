@@ -1,8 +1,8 @@
 external_components:
-  - source: 
+  - source:
       type: git
-      url: https://github.com/heinekmadsen/esphome_components
-      ref: "main"
+      url: https://github.com/super-bedst/esphome_components
+      ref: main
     refresh: 0s
     components: [genvexv2]
 
