@@ -12,31 +12,13 @@
 
 ## Recommended path (ESP-01 / 16 zones)
 
-### Option A — Ready-made package (fastest)
+### Option A — Full file (fastest)
 
-Use the templates in `configs/`:
+Copy the complete config to Home Assistant:
 
-```yaml
-# wavin.yaml — either copy both files locally or use packages from git:
+**[configs/wavin.yaml](configs/wavin.yaml)** → `/config/esphome/wavin.yaml`
 
-external_components:
-  - source:
-      type: git
-      url: https://github.com/super-bedst/esphome_components
-      ref: main
-    refresh: 0s
-    components: [wavinahc9000v3]
-
-packages:
-  wavin_base:
-    url: https://github.com/super-bedst/esphome_components
-    ref: main
-    files:
-      - components/wavinahc9000v3/configs/wavin-esp01-base.yaml
-    refresh: 0s
-```
-
-`wavin-esp01-base.yaml` already includes `entities_16_channels.yaml` (16 climates + battery + temperature).
+One file, ESPHome 2026.5 syntax (`esp8266:` block, no `platform:` under `esphome:`), single `external_components` entry.
 
 Adjust secrets, `use_address`, and GPIO pins if your wiring differs.
 
