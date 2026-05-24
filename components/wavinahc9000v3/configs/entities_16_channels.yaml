@@ -1,0 +1,227 @@
+# 16 single-zone climates + battery/temperature sensors (match your v1 layout)
+climate:
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Køkken"
+    channel: 1
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Værelse NV"
+    channel: 2
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Bad Vest"
+    channel: 3
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Værelse SV"
+    channel: 4
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Multirum"
+    channel: 5
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Værelse SØ"
+    channel: 6
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Depot"
+    channel: 7
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Stue"
+    channel: 8
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Bad Øst"
+    channel: 9
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Gang"
+    channel: 10
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Værksted"
+    channel: 11
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Garage"
+    channel: 12
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Redskabsskur"
+    channel: 13
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Soveværelse"
+    channel: 14
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Kontor"
+    channel: 15
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Entre"
+    channel: 16
+sensor:
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Køkken Battery"
+    channel: 1
+    type: battery
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Køkken Temperature"
+    channel: 1
+    type: temperature
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Værelse NV Battery"
+    channel: 2
+    type: battery
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Værelse NV Temperature"
+    channel: 2
+    type: temperature
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Bad Vest Battery"
+    channel: 3
+    type: battery
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Bad Vest Temperature"
+    channel: 3
+    type: temperature
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Værelse SV Battery"
+    channel: 4
+    type: battery
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Værelse SV Temperature"
+    channel: 4
+    type: temperature
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Multirum Battery"
+    channel: 5
+    type: battery
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Multirum Temperature"
+    channel: 5
+    type: temperature
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Værelse SØ Battery"
+    channel: 6
+    type: battery
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Værelse SØ Temperature"
+    channel: 6
+    type: temperature
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Depot Battery"
+    channel: 7
+    type: battery
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Depot Temperature"
+    channel: 7
+    type: temperature
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Stue Battery"
+    channel: 8
+    type: battery
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Stue Temperature"
+    channel: 8
+    type: temperature
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Bad Øst Battery"
+    channel: 9
+    type: battery
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Bad Øst Temperature"
+    channel: 9
+    type: temperature
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Gang Battery"
+    channel: 10
+    type: battery
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Gang Temperature"
+    channel: 10
+    type: temperature
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Værksted Battery"
+    channel: 11
+    type: battery
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Værksted Temperature"
+    channel: 11
+    type: temperature
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Garage Battery"
+    channel: 12
+    type: battery
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Garage Temperature"
+    channel: 12
+    type: temperature
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Redskabsskur Battery"
+    channel: 13
+    type: battery
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Redskabsskur Temperature"
+    channel: 13
+    type: temperature
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Soveværelse Battery"
+    channel: 14
+    type: battery
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Soveværelse Temperature"
+    channel: 14
+    type: temperature
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Kontor Battery"
+    channel: 15
+    type: battery
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Kontor Temperature"
+    channel: 15
+    type: temperature
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Entre Battery"
+    channel: 16
+    type: battery
+  - platform: wavinahc9000v3
+    wavinahc9000v3_id: wavin
+    name: "Entre Temperature"
+    channel: 16
+    type: temperature

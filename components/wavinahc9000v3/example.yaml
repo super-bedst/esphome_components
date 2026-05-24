@@ -10,10 +10,8 @@ esp32:
 external_components:
   - source:
       type: git
-      url: https://github.com/heinekmadsen/esphome_components
-      ref: "v1.0.1"
-      #ref: "main"
-      #ref: "develop"
+      url: https://github.com/super-bedst/esphome_components
+      ref: main
     components: [wavinahc9000v3]
     refresh: 0s
 
