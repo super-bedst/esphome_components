@@ -28,7 +28,23 @@ packages:
     refresh: 0s
 ```
 
-`optima250.yaml` already includes `external_components`; you can omit the duplicate block in your main YAML if you only use the package.
+Put `external_components` **only** in your main `genvex.yaml` (not in the package file), so ESPHome fetches the git repo once.
+
+### Silence other ESPHome 2026.5 warnings
+
+**`custom_components` folder deprecated** — Remove or empty the old local folder if you migrated to git `external_components`, for example:
+
+- Home Assistant: `/config/esphome/custom_components/` (delete `genvexv2` or the whole folder if unused)
+- ESPHome Dashboard: check the device config directory for a `custom_components` subfolder
+
+**WiFi `min_auth_mode`** — Add under `wifi:` in `genvex.yaml` (use `WPA2` if your router supports it):
+
+```yaml
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  min_auth_mode: WPA2
+```
 
 ## Changes (genvexv2)
 

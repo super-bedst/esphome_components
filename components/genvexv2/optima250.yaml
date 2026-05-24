@@ -1,10 +1,4 @@
-external_components:
-  - source:
-      type: git
-      url: https://github.com/super-bedst/esphome_components
-      ref: main
-    refresh: 0s
-    components: [genvexv2]
+# external_components: define once in your main genvex.yaml (not here), see ESPHOME_2026.md
 
 genvexv2:
 
