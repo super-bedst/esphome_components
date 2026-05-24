@@ -8,7 +8,8 @@ substitutions:
   device_name: wavin
   friendly_name: Wavin
   log_level: DEBUG
-  update_interval: 60s
+  # Hvor ofte hubben kører (lavere = hurtigere opdatering af alle zoner)
+  update_interval: 15s
 
   channel_1: Køkken
   channel_2: Værelse NV
@@ -92,6 +93,8 @@ wavinahc9000v3:
   id: wavin
   uart_id: uart_wavin
   update_interval: ${update_interval}
+  # Standard er 2: kun 2 kanaler læses fra bussen per cyklus (resten er "gamle" værdier)
+  poll_channels_per_cycle: 16
   tx_enable_pin: ${tx_enable_pin}
   channel_01_friendly_name: "${channel_1}"
   channel_02_friendly_name: "${channel_2}"
