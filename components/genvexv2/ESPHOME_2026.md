@@ -16,7 +16,19 @@ external_components:
     components: [genvexv2]
 ```
 
-Then include the device package as usual, e.g. `components/genvexv2/optima250.yaml` via `packages:` or copy its contents.
+Load the device config from the **same fork** (do not use `heinekmadsen/esphome_components`):
+
+```yaml
+packages:
+  remote_package:
+    url: https://github.com/super-bedst/esphome_components
+    ref: main
+    files:
+      - components/genvexv2/optima250.yaml
+    refresh: 0s
+```
+
+`optima250.yaml` already includes `external_components`; you can omit the duplicate block in your main YAML if you only use the package.
 
 ## Changes (genvexv2)
 
